@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_samples/samples/animations/animation_samples_list.dart';
-import 'package:flutter_samples/samples/animations/grid_magnification/grid_magnification.dart';
 import 'package:flutter_samples/samples/ui/rive_app/home.dart';
 
 void main() {
@@ -18,8 +16,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       routes: {
         RiveAppHome.route: (context) => const RiveAppHome(),
-        AnimationSamplesList.route: (context) => const AnimationSamplesList(),
-        GridMagnification.route: (context) => const GridMagnification(),
       },
       home: const RiveAppHome(),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rive/rive.dart' hide LinearGradient, Image;
-import 'package:flutter_samples/samples/ui/rive_app/theme.dart';
 import 'package:flutter_samples/samples/ui/rive_app/assets.dart' as app_assets;
+import 'package:flutter_samples/samples/ui/rive_app/theme.dart';
+import 'package:rive/rive.dart' hide LinearGradient, Image;
 
 class SignInView extends StatefulWidget {
   const SignInView({Key? key, this.closeModal}) : super(key: key);
@@ -91,7 +91,10 @@ class _SignInViewState extends State<SignInView> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(
-                      colors: [Colors.white.withOpacity(0.8), Colors.white10],
+                      colors: [
+                        Colors.white.withValues(alpha: 0.8),
+                        Colors.white10
+                      ],
                     ),
                   ),
                   child: Container(
@@ -100,11 +103,11 @@ class _SignInViewState extends State<SignInView> {
                         borderRadius: BorderRadius.circular(20),
                         boxShadow: [
                           BoxShadow(
-                              color: RiveAppTheme.shadow.withOpacity(0.3),
+                              color: RiveAppTheme.shadow.withValues(alpha: 0.3),
                               offset: const Offset(0, 3),
                               blurRadius: 5),
                           BoxShadow(
-                              color: RiveAppTheme.shadow.withOpacity(0.3),
+                              color: RiveAppTheme.shadow.withValues(alpha: 0.3),
                               offset: const Offset(0, 30),
                               blurRadius: 30)
                         ],
@@ -165,7 +168,8 @@ class _SignInViewState extends State<SignInView> {
                           decoration: BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                color: const Color(0xFFF77D8E).withOpacity(0.5),
+                                color: const Color(0xFFF77D8E)
+                                    .withValues(alpha: 0.5),
                                 blurRadius: 20,
                                 offset: const Offset(0, 10),
                               )
@@ -210,7 +214,8 @@ class _SignInViewState extends State<SignInView> {
                                 child: Text(
                                   "OR",
                                   style: TextStyle(
-                                      color: Colors.black.withOpacity(0.3),
+                                      color:
+                                          Colors.black.withValues(alpha: 0.3),
                                       fontSize: 15,
                                       fontFamily: "Inter"),
                                 ),
@@ -237,7 +242,6 @@ class _SignInViewState extends State<SignInView> {
                     ),
                   ),
                 ),
-
                 Positioned.fill(
                   child: IgnorePointer(
                     ignoring: true,
@@ -270,7 +274,6 @@ class _SignInViewState extends State<SignInView> {
                     ),
                   ),
                 ),
-
                 Positioned(
                   bottom: 0,
                   left: 0,
@@ -289,7 +292,7 @@ class _SignInViewState extends State<SignInView> {
                           borderRadius: BorderRadius.circular(36 / 2),
                           boxShadow: [
                             BoxShadow(
-                              color: RiveAppTheme.shadow.withOpacity(0.3),
+                              color: RiveAppTheme.shadow.withValues(alpha: 0.3),
                               blurRadius: 5,
                               offset: const Offset(0, 3),
                             )
@@ -322,12 +325,13 @@ InputDecoration authInputStyle(String iconName) {
       fillColor: Colors.white,
       enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.black.withOpacity(0.1))),
+          borderSide: BorderSide(color: Colors.black.withValues(alpha: 0.1))),
       focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide: BorderSide(color: Colors.black.withOpacity(0.1))),
+          borderSide: BorderSide(color: Colors.black.withValues(alpha: 0.1))),
       contentPadding: const EdgeInsets.all(15),
       prefixIcon: Padding(
           padding: const EdgeInsets.only(left: 4),
-          child: Image.asset("assets/samples/ui/rive_app/images/$iconName.png")));
+          child:
+              Image.asset("assets/samples/ui/rive_app/images/$iconName.png")));
 }

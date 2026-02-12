@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/models/samples.dart';
-import 'package:flutter_samples/screens/list/grid_item_view.dart';
-import 'package:flutter_samples/screens/list/list_item_view.dart';
 
 class SamplesListView extends StatefulWidget {
   const SamplesListView(
@@ -72,39 +70,6 @@ class _SamplesListViewState extends State<SamplesListView> {
               ),
             ),
             const SizedBox(height: 8),
-            Expanded(
-              child: isGrid
-                  ? GridView(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 6),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: MediaQuery.of(context).size.width > 992
-                            ? 4
-                            : MediaQuery.of(context).size.width > 768
-                                ? 3
-                                : 2,
-                        mainAxisSpacing: 12.0,
-                        crossAxisSpacing: 12.0,
-                      ),
-                      scrollDirection: Axis.vertical,
-                      children: List<Widget>.generate(widget.listData.length,
-                          (index) {
-                        return GridItemView(
-                            index: index,
-                            listItem: widget.listData[index],
-                            onPressed: () => onSamplePress(index));
-                      }),
-                    )
-                  : ListView.builder(
-                      padding: const EdgeInsets.symmetric(horizontal: 6),
-                      itemCount: widget.listData.length,
-                      itemBuilder: (context, index) {
-                        return ListItemView(
-                            index: index,
-                            listItem: widget.listData[index],
-                            onPressed: () => onSamplePress(index));
-                      }),
-            )
           ],
         ),
       ),

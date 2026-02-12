@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_samples/samples/animations/grid_magnification/grid_magnification.dart';
 import 'package:flutter_samples/samples/ui/rive_app/assets.dart' as app_assets;
 import 'package:flutter_samples/samples/ui/rive_app/components/menu_row.dart';
 import 'package:flutter_samples/samples/ui/rive_app/models/menu_item.dart';
@@ -34,10 +33,7 @@ class _SideMenuState extends State<SideMenu> {
       _selectedMenu = menu.title;
     });
 
-    // Navigate to Grid Magnification screen if that menu item is selected
-    if (menu.title == "Grid Magnification") {
-      Navigator.pushNamed(context, GridMagnification.route);
-    }
+   
   }
 
   void onThemeToggle(value) {
@@ -66,7 +62,7 @@ class _SideMenuState extends State<SideMenu> {
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: Colors.white.withOpacity(0.2),
+                  backgroundColor: Colors.white.withValues(alpha: 0.2),
                   foregroundColor: Colors.white,
                   child: const Icon(Icons.person_outline),
                 ),
@@ -86,7 +82,7 @@ class _SideMenuState extends State<SideMenu> {
                     Text(
                       "Software Engineer",
                       style: TextStyle(
-                          color: Colors.white.withOpacity(0.7),
+                          color: Colors.white.withValues(alpha: 0.7),
                           fontSize: 15,
                           fontFamily: "Inter"),
                     )

@@ -1,13 +1,15 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:rive/rive.dart';
-import 'package:flutter_samples/samples/ui/rive_app/models/menu_item.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_samples/samples/ui/rive_app/assets.dart' as app_assets;
+import 'package:flutter_samples/samples/ui/rive_app/models/menu_item.dart';
+import 'package:rive/rive.dart';
 
 class MenuRow extends StatelessWidget {
   const MenuRow(
-      {Key? key, required this.menu, this.selectedMenu = "Home", this.onMenuPress})
-      : super(key: key);
+      {super.key,
+      required this.menu,
+      this.selectedMenu = "Home",
+      this.onMenuPress});
 
   final MenuItemModel menu;
   final String selectedMenu;

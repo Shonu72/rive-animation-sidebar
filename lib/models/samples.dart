@@ -1,5 +1,3 @@
-import 'package:flutter_samples/samples/animations/animation_samples_list.dart';
-import 'package:flutter_samples/samples/animations/grid_magnification/grid_magnification.dart';
 import 'package:flutter_samples/samples/ui/rive_app/home.dart';
 
 class SampleData {
@@ -21,20 +19,8 @@ class SampleData {
             'Full application UI samples with some interesting animations and challenges.',
         background: 'assets/samples/ui/rive_app/course_rive.png',
         routeName: RiveAppHome.route),
-    SampleData(
-        name: 'Animations',
-        description:
-            'Samples showcasing some interesting and complex animations in flutter.',
-        background: 'assets/samples/animations/grid_magnification.png',
-        routeName: AnimationSamplesList.route),
+   
   ];
 
-  static List<SampleData> animationSamples = [
-    SampleData(
-        name: 'Grid Magnification',
-        description:
-            'A grid list view that displays Magnify effect on long press & drag, focusing on the items near the touch area within a radius.',
-        background: 'assets/samples/animations/grid_magnification.png',
-        routeName: GridMagnification.route),
-  ];
+ 
 }

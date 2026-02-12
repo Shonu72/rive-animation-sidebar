@@ -25,18 +25,18 @@ class _VCardState extends State<VCard> {
       constraints: const BoxConstraints(maxWidth: 260, maxHeight: 310),
       padding: const EdgeInsets.all(30),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-            colors: [widget.course.color, widget.course.color.withOpacity(0.5)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight),
+        gradient: LinearGradient(colors: [
+          widget.course.color,
+          widget.course.color.withValues(alpha: 0.5)
+        ], begin: Alignment.topLeft, end: Alignment.bottomRight),
         boxShadow: [
           BoxShadow(
-            color: widget.course.color.withOpacity(0.3),
+            color: widget.course.color.withValues(alpha: 0.3),
             blurRadius: 8,
             offset: const Offset(0, 12),
           ),
           BoxShadow(
-            color: widget.course.color.withOpacity(0.3),
+            color: widget.course.color.withValues(alpha: 0.3),
             blurRadius: 2,
             offset: const Offset(0, 1),
           )
@@ -64,7 +64,7 @@ class _VCardState extends State<VCard> {
                 maxLines: 2,
                 softWrap: false,
                 style: TextStyle(
-                    color: Colors.white.withOpacity(0.7), fontSize: 15),
+                    color: Colors.white.withValues(alpha: 0.7), fontSize: 15),
               ),
               const SizedBox(height: 8),
               Text(

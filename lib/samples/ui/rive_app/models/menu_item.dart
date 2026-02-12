@@ -31,10 +31,6 @@ class MenuItemModel {
       title: "Help",
       riveIcon: TabItem(stateMachine: "CHAT_Interactivity", artboard: "CHAT"),
     ),
-    MenuItemModel(
-      title: "Grid Magnification",
-      riveIcon: TabItem(stateMachine: "USER_Interactivity", artboard: "MENU"),
-    ),
   ];
 
   static List<MenuItemModel> menuItems2 = [
