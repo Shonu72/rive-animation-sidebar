@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -11,7 +13,6 @@ import 'package:flutter_samples/samples/ui/rive_app/on_boarding/onboarding_view.
 import 'package:flutter_samples/samples/ui/rive_app/theme.dart';
 import 'package:rive/rive.dart' hide LinearGradient;
 
-// Common Tab Scene for the tabs other than 1st one, showing only tab name in center
 Widget commonTabScene(String tabName) {
   return Container(
       color: RiveAppTheme.background,
@@ -197,7 +198,7 @@ class _RiveAppHomeState extends State<RiveAppHome>
                     borderRadius: BorderRadius.circular(18),
                     boxShadow: [
                       BoxShadow(
-                        color: RiveAppTheme.shadow.withOpacity(0.2),
+                        color: RiveAppTheme.shadow.withValues(alpha: .2),
                         blurRadius: 5,
                         offset: const Offset(0, 5),
                       )
@@ -239,7 +240,7 @@ class _RiveAppHomeState extends State<RiveAppHome>
                       borderRadius: BorderRadius.circular(44 / 2),
                       boxShadow: [
                         BoxShadow(
-                          color: RiveAppTheme.shadow.withOpacity(0.2),
+                          color: RiveAppTheme.shadow.withValues(alpha: 0.2),
                           blurRadius: 5,
                           offset: const Offset(0, 5),
                         )
@@ -284,7 +285,7 @@ class _RiveAppHomeState extends State<RiveAppHome>
                           bottomRight: Radius.circular(30)),
                       boxShadow: [
                         BoxShadow(
-                            color: Colors.black.withOpacity(0.5),
+                            color: Colors.black.withValues(alpha: .5),
                             blurRadius: 40,
                             offset: const Offset(0, 40))
                       ],

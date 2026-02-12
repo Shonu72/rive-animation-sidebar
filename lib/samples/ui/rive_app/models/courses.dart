@@ -23,16 +23,16 @@ class CourseModel {
         color: const Color(0xFF7850F0),
         image: app_assets.topic_1),
     CourseModel(
-        title: "Build Quick Apps with SwiftUI",
+        title: "Build Quick Apps with Flutter",
         subtitle:
-            "Apply your Swift and SwiftUI knowledge by building real, quick and various applications from scratch",
-        caption: "47 sections - 11 hours",
+            "Apply your Flutter knowledge by building real, quick and various applications from scratch",
+        caption: "47 sections - 10 hours",
         color: const Color(0xFF6792FF),
         image: app_assets.topic_2),
     CourseModel(
-        title: "Build a SwiftUI app for iOS 15",
+        title: "Build a SwiftUI app for iOS 26.2",
         subtitle:
-            "Design and code a SwiftUI 3 app with custom layouts, animations and gestures using Xcode 13, SF Symbols 3, Canvas, Concurrency, Searchable and a whole lot more",
+            "Design and code a SwiftUI app with custom layouts, animations and gestures using Xcode 26.2, SF Symbols 3, Canvas, Concurrency, Searchable and a whole lot more",
         caption: "21 sections - 4 hours",
         color: const Color(0xFF005FE7),
         image: app_assets.topic_1),

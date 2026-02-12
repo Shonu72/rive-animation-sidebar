@@ -33,7 +33,7 @@ class MenuItemModel {
     ),
     MenuItemModel(
       title: "Grid Magnification",
-      riveIcon: TabItem(stateMachine: "STAR_Interactivity", artboard: "LIKE/STAR"),
+      riveIcon: TabItem(stateMachine: "USER_Interactivity", artboard: "MENU"),
     ),
   ];
 

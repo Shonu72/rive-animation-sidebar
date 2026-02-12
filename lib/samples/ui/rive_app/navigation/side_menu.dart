@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rive/rive.dart';
+import 'package:flutter_samples/samples/animations/grid_magnification/grid_magnification.dart';
+import 'package:flutter_samples/samples/ui/rive_app/assets.dart' as app_assets;
 import 'package:flutter_samples/samples/ui/rive_app/components/menu_row.dart';
 import 'package:flutter_samples/samples/ui/rive_app/models/menu_item.dart';
 import 'package:flutter_samples/samples/ui/rive_app/theme.dart';
-import 'package:flutter_samples/samples/ui/rive_app/assets.dart' as app_assets;
-import 'package:flutter_samples/samples/animations/grid_magnification/grid_magnification.dart';
+import 'package:rive/rive.dart';
 
 class SideMenu extends StatefulWidget {
-  const SideMenu({Key? key}) : super(key: key);
+  const SideMenu({super.key});
 
   @override
   State<SideMenu> createState() => _SideMenuState();
@@ -33,7 +33,7 @@ class _SideMenuState extends State<SideMenu> {
     setState(() {
       _selectedMenu = menu.title;
     });
-    
+
     // Navigate to Grid Magnification screen if that menu item is selected
     if (menu.title == "Grid Magnification") {
       Navigator.pushNamed(context, GridMagnification.route);
@@ -152,12 +152,11 @@ class _SideMenuState extends State<SideMenu> {
 
 class MenuButtonSection extends StatelessWidget {
   const MenuButtonSection(
-      {Key? key,
+      {super.key,
       required this.title,
       required this.menuIcons,
       this.selectedMenu = "Home",
-      this.onMenuPress})
-      : super(key: key);
+      this.onMenuPress});
 
   final String title;
   final String selectedMenu;
@@ -175,7 +174,7 @@ class MenuButtonSection extends StatelessWidget {
           child: Text(
             title,
             style: TextStyle(
-                color: Colors.white.withOpacity(0.7),
+                color: Colors.white.withValues(alpha: .7),
                 fontSize: 15,
                 fontFamily: "Inter",
                 fontWeight: FontWeight.w600),
@@ -187,7 +186,7 @@ class MenuButtonSection extends StatelessWidget {
             children: [
               for (var menu in menuIcons) ...[
                 Divider(
-                    color: Colors.white.withOpacity(0.1),
+                    color: Colors.white.withValues(alpha: 0.1),
                     thickness: 1,
                     height: 1,
                     indent: 16,
