@@ -1,4 +1,4 @@
 ## 💪🏼 Getting Started
 
-This repo is for youtube video of rive animation shorts
+This repo shows rive animation in flutter - yt shorts 
 
